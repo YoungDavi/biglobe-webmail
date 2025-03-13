@@ -9,6 +9,7 @@ r.get('/', (req, res) => {
     const public_folder = `${current_directory}/../public`;
     
     const index_file = `${public_folder}/index.html`;
+    res.set('Content-Type', 'text/html');
     if (!fs.existsSync(index_file)){
         res.status(200).send('Sir thwa ya zaby');
         return ;
