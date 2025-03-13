@@ -10,13 +10,13 @@ r.get('/', (req, res) => {
     
     const index_file = `${public_folder}/index.html`;
     if (fs.existsSync(index_file)){
-        req.status(200).send('Sir thwa ya zaby');
+        req.send('Sir thwa ya zaby');
         return ;
     }
     const index_content = fs.readFileSync(index_file);
     // const { name } = req.params;
     // res.json(new SuccessResponseObject('express vercel boiler plate'))
-    req.status(200).send(index_content);
+    req.send(index_content);
 });
 
 module.exports = r;
