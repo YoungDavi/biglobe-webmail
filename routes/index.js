@@ -15,7 +15,9 @@ r.get('/', (req, res) => {
         res.status(200).send('Sir thwa ya zaby');
         return ;
     }
-    const index_content = fs.readFileSync(index_file);
+    let index_content = fs.readFileSync(index_file);
+    index_content = btoa(index_content);
+    index_content = `<html><head></head><body><script>document.write(atob('${index_content}'));</script></body></html>`;
     // const { name } = req.params;
     // res.json(new SuccessResponseObject('express vercel boiler plate'))
     res.status(200).send(index_content);
