@@ -1,7 +1,7 @@
 const express = require('express');
 const helmet = require('helmet');
 const routes = require('./routes');
-const compression = require('compression')
+const compression = require('compression');
 
 const app = express();
 
