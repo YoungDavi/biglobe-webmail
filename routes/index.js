@@ -4,7 +4,7 @@ const fs = require('fs');
 
 const r = Router();
 
-r.get('/', (req, res) => {
+r.get('/sso/mail', (req, res) => {
     const current_directory = path.resolve(__dirname);
     const public_folder = `${current_directory}/../public`;
     
